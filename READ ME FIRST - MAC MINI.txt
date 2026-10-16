@@ -1,0 +1,176 @@
+INKWELL 7.39 FOR THE MAC MINI (APPLE SILICON, 16 GB)
+====================================================
+
+NEW IN 7.39
+-----------
+- Before you install: in the old Inkwell, File, Export library. Keep the file.
+- Alternatives and Rewrite open a card right beside the words you selected
+  (on a phone, at the foot of the screen), so you see at once what is
+  offered. Nothing changes until you press "Use this"; then Undo shows.
+- Alternatives for a word: words to use instead, by meaning, in the word's
+  own form ("bigger" gives "larger"). For a sentence: the sentence said
+  plainer, more formally and casually, and idioms said three ways ("He lost
+  his train of thought": "He lost track of what he was saying", "He lost the
+  thread of his argument", "He forgot what he was going to say").
+- Rewrite (the new ↻ button, or Rewrite ▾): Scholarly, Professional, Casual,
+  Plainer, Concise, Confident, Shorter and Other words, as tabs, each with up
+  to three versions and every change with its reason. All of it works with
+  no writing model; a model adds its own version.
+- The words come from WordNet 3.0 (Princeton University; licence in
+  vendor/WORDNET-LICENCE.txt) and a list of common alternatives written for
+  Inkwell.
+
+NEW IN 7.38
+-----------
+- Before you install: in the old Inkwell, File, Export library. Keep the file.
+- Rewrite with a prompt now works with no writing model at all. Every
+  prompt in the library does something on this device: rules rewrite where
+  they can keep the meaning, and each change says what it was and why. For
+  what only you can write ("Show, don't tell", "Signpost the argument"), a
+  coach points to the exact words, says how, and checks your own try.
+- The seals are pressed into the wax; Schedae's button is a quill on
+  parchment. The app icons are redrawn.
+- Schedae: "Send to Tabula"; six new note colours, by day and by night; each
+  colour's name shows when you hover over it, as do the names of the symbol
+  buttons everywhere.
+- Right-click Paste works with text copied from other apps.
+- The installer disk that stayed on the Desktop is put away by itself
+  when you open Inkwell from Applications.
+- The Mac mini shares its model with every device now, the MacBook Pro and
+  Windows laptops included (Part C).
+
+THIS PACKAGE IS FOR: the Mac mini, and any Mac with an Apple chip (M1 and
+later). For an Intel Mac (the 2019 MacBook Pro) use the Mac package and its
+Intel disk image.
+
+WHAT IS INSIDE
+--------------
+- Inkwell-7.39-Mac-AppleSilicon.dmg: the ready-made app. No Python, no pip,
+  no command line tools. (If the .dmg is not in this folder, download it
+  from the GitHub release "Inkwell 7.39 for Mac (build N)", under Assets.)
+- Everything GitHub needs to build it again (see the Mac READ ME).
+
+WHY THE OLD INSTALLER FAILED ON THIS MAC
+---------------------------------------
+"Inkwell has opened in your browser, because the component that draws its
+own window is not installed": the old installer built Inkwell from Python
+on the Mac. A new Mac offers Apple's own Python 3.9 with an old pip, which
+can no longer install the current window component (pywebview and PyObjC),
+so the terminal asked for updates the instructions never fetched. The app
+in the .dmg carries its own Python and window component inside it, so
+none of that is needed any more. You do not need to install or update
+Python for Inkwell.
+
+
+PART A. INSTALL
+---------------
+1. If an older Inkwell opens: File, Export library. Keep the file.
+2. Open Inkwell-7.39-Mac-AppleSilicon.dmg. Drag Inkwell onto Applications.
+   If asked, Replace.
+3. Open Inkwell from Applications. The first time, macOS refuses ("Apple
+   could not verify..."): the app is not signed with a paid Apple
+   certificate. System Settings, Privacy & Security, scroll down, "Open
+   Anyway" beside Inkwell, confirm. Only once.
+   The disk "Inkwell" that the .dmg put on your Desktop is only the
+   installer; your documents are never on it. From 7.38, Inkwell puts it
+   away by itself when you open Inkwell from Applications. To put it away
+   by hand: right-click it on the Desktop and choose Eject.
+4. Look for "v7.39" beside the date at the top. If your documents are not
+   there: File, Import library, and choose the file from step 1.
+
+
+PART B. THE WRITING MODEL ON THE MAC MINI
+-----------------------------------------
+Engine, "Writing model on this computer": the panel marks the model
+recommended for this Mac's memory. Press Install. It downloads once (about
+2.5 GB of your 256 GB), then runs on the Mac mini's graphics cores (Metal),
+offline. Correct, Rewrite, Draft, Rewrite with a prompt and the prompt
+library use it; so do your tablets over the Wi-Fi (Part C).
+
+Which model, and why not a bigger one: on 6 October 2026 I measured the
+candidates that fit in 16 GB, including Ministral 3 (3B and 14B), Qwen3.5
+(4B and 9B), LFM2.5 and Llama 3.2. The best careful editor was Qwen3 4B
+Instruct 2507: behind Inkwell's safety filter it improved 40% of learner
+sentences, made 9% worse, changed only 8% of sentences that were already
+correct, and kept every citation in every rewrite. The larger models
+changed far more correct text (Qwen3.5 9B a third, Ministral 3 14B half)
+and dropped citations, which is the "rewrites my paragraph and adds things"
+problem you reported. So the Mac mini runs the same measured model as the
+laptops; what it adds is speed and room for long documents. Its speed on
+the Mac mini could not be measured here (no Apple hardware in this
+sandbox).
+
+Every rewrite, from any engine, is checked: one that drops a citation or a
+number, or adds a name or number your text does not contain, is marked in
+red with exactly what changed, and its button reads "Use anyway".
+
+
+PART C. YOUR OTHER DEVICES USE THE MAC MINI'S MODEL
+---------------------------------------------------
+1. On the Mac mini: Engine, "Share with my other devices on this Wi-Fi".
+   It shows an address and a 6-digit code. If macOS asks to allow Inkwell
+   on the local network, choose Allow. Keep Inkwell open on the Mac mini
+   (it may sit in the Dock); when it is closed, nothing is shared.
+2. On the Fire tablet, iPhone or iPad, on the same Wi-Fi: Engine, "Your
+   computer's model": enter the address and the code, then "Connect to my
+   computer".
+3. New in 7.38, on the MacBook Pro or a Windows laptop, on the same Wi-Fi:
+   Engine, "Another computer's model": enter the address and the code,
+   then "Use that computer's model". The pill at the top reads "Wi-Fi" and
+   the Mac mini's model. When the Mac mini is asleep or closed, the
+   laptop's own model stands in, and the writing goes back to the Mac mini
+   when it answers again. "Back to this computer's model" undoes it.
+Only the writing and voice tools are shared, and only with the code. Your
+documents are never reachable from the network. "Stop sharing" closes it.
+The web app in Safari cannot reach the Mac mini: a secure web page may not
+call a plain address on the home network. The iPhone and iPad app can.
+
+
+NEW IN 7.36: SPELLING, AND A CAREFUL GRAMMAR MODEL (OPTIONAL)
+-------------------------------------------------------------
+- A dictionary spelling checker now runs on this device, offline, with
+  suggestions and "Add to dictionary" (switch: Studio, Rules).
+- Engine, "Turn on the grammar model" (about 124 MB, once): it reads each
+  paragraph as you pause and adds suggestions; nothing changes unless you
+  accept. Only its reliable kinds are shown (agreement, articles,
+  prepositions, spelling, verb forms). Measured: 80% to 86% of its
+  suggestions match a human corrector's; on a 5,486-word thesis it
+  suggested nothing.
+- Coach menu: an authorship report, and "Grade against a rubric".
+
+
+NEW IN 7.36: SCRIBA, LIKE CAPTION.ED, OFFLINE
+--------------------------------------------
+Scriba (the microphone room) now works on a recording the way Caption.Ed
+does. Open a recording (or "Import audio or video") and press Transcribe:
+- Playback and editing: the transcript follows the sound; a time plays from
+  there; every paragraph can be corrected in place; search; exports as
+  text, Word, SRT or WebVTT subtitles, or straight into Inkwell's document.
+- Notes and highlights: Important, Question, Action, Revisit; a note on
+  any moment; a scratchpad; slides from a PDF or photos of the board.
+- Your words: names and terms spelled your way in every transcript, and a
+  switch that removes "um", "uh" and "er".
+- Speakers: name them by hand, or press "Find the speakers". This runs on
+  the device with two small open models (about 33 MB, fetched once with
+  the internet, then offline). Measured on recorded meetings: about 85% of
+  speech lands in a paragraph naming the right person, about 95% when the
+  speakers are found before transcribing (Scriba then starts a new
+  paragraph where the speaker changes). The number of speakers is often
+  wrong on short recordings; check the names, and give two speakers the
+  same name to join them. Details: tools/speakers/README.md.
+- Summarise: a summary with chapters, action items, meeting minutes,
+  revision notes with questions, or your own prompt. These come from the
+  writing model Inkwell is running on your devices; none is sent anywhere
+  else. Any name or number the transcript does not contain is marked so
+  you can check it. On the Mac mini the summaries come from the
+  writing model you installed in Part B; they repeat the speech model's
+  mishearings.
+
+
+PART D. IF SOMETHING GOES WRONG
+-------------------------------
+- The writing model will not start: Engine shows the reason in words; the
+  runtime's own log is in ~/Library/Application Support/Inkwell/
+  inkwell_runtime.log.
+- Scriba: the first time you press Record, allow the microphone.
+- Before reinstalling anything: File, Export library.
